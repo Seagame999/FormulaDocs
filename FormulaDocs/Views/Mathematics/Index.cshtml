@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "สูตรคณิตศาสตร์";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
+    </ol>
+</nav>
+
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <h5>เลือกเรื่อง</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="h5" href="@Url.Action("Areas")">พื้นที่</a></li>
+                    @*<li class="list-group-item"><a class="h5" href="@Url.Action("#")">พื้นที่</a></li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

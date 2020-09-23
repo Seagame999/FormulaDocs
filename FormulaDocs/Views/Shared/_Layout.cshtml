@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Formulas Docs</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <script src="~/Scripts/popper.js"></script>
     <script src="~/Scripts/jquery-3.5.1.js"></script>
@@ -21,19 +21,10 @@
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Fomula Docs</div>
+            <div class="sidebar-heading">Fomulas Docs</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action bg-light"></a>
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        คณิตศาสตร์
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">พื้นที่</a>
-                        <hr />
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <hr />
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>               
+                <a href="@Url.Action("Index","Mathematics")" class="list-group-item list-group-item-action bg-light">คณิตศาสตร์</a>
+                @*<a href="#" class="list-group-item list-group-item-action bg-light">ฟิสิกส์</a>*@
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -41,14 +32,14 @@
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary" id="menu-toggle">เมนูสูตร</button>
+                <button class="btn btn-outline-primary" id="menu-toggle">เริ่ม!</button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item">
                             <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                <input class="form-control mr-sm-2" type="search" placeholder="ใส่อะไรบางอย่าง" aria-label="Search">
+                                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">ค้นหา</button>
                             </form>
                         </li>
                     </ul>
@@ -56,15 +47,11 @@
             </nav>
 
             <div class="container-fluid">
-                <br/>
+                <br />
                 @RenderBody()
-                <br/>
+                <br />
                 <footer>
-                    <div class="card">
-                        <div class="card-body">
-                            this is footer
-                        </div>
-                    </div>
+                    FormulasDocs.com
                 </footer>
             </div>
         </div>

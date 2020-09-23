@@ -17,14 +17,11 @@ namespace FormulaDocs.Controllers
         // GET: Mathematics
         public ActionResult Index()
         {
-            if (Session["Role"].Equals("Admin"))
-            {
-                return View();
-            }
-            else
-            {
-               return RedirectToAction("Index", "Home");
-            }
+            var mathTopic = new List<string>() { "พื้นที่","ปริมาตร","ฟังก์ชัน" };           
+            ViewBag.mathTopicView = mathTopic;
+
+
+            return View();
         }
 
         public ActionResult AddFormulas()
