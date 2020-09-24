@@ -336,11 +336,13 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Mathematics\Index.cshtml" />
     <Content Include="Views\Mathematics\Areas.cshtml" />
+    <Content Include="Views\Login176\Index.cshtml" />
+    <Content Include="Views\PublicRelation\CreateNews.cshtml" />
+    <Content Include="Views\Mathematics\AddFormulas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Login\" />
-    <Folder Include="Views\PublicRelation\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

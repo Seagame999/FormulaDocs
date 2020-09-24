@@ -17,18 +17,22 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="card-deck">
-                @foreach (var data in Model)
-                {
-                    <div class="card border-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-header"><a class="h5" href="@Url.Action("Formulas"+"/"+data.Id,"Mathematics")">@data.Name</a></div>
-                        <div class="card-body text-dark">
-                            <h5 class="card-title">@data.Name</h5>
-                            <p class="card-text">@data.Image1</p>
-                            <p class="card-text">@data.Description1.Substring(0, Math.Min(data.Description1.Length, 40))</p>
+            <div class="col-md-12">
+                <div class="card-deck">
+                    @foreach (var data in Model)
+                    {
+                        <div class="col-6">
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header"><a class="h5" href="@Url.Action("Formulas"+"/"+data.Id,"Mathematics")">@data.Name</a></div>
+                                <div class="card-body text-dark">
+                                    <h5 class="card-title">@data.Name</h5>
+                                    <p class="card-text">@data.Image1</p>
+                                    <p class="card-text">@data.Description1.Substring(0, Math.Min(data.Description1.Length, 40))</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
         </div>
     </div>

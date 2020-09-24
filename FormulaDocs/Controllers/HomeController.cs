@@ -16,7 +16,7 @@ namespace FormulaDocs.Controllers
 
         public ActionResult Index()
         {
-            var publicRelationResult = db.PublicRelation.ToList().LastOrDefault();
+            var publicRelationResult = db.PublicRelation.Where(x => x.DataIsActive == true).ToList().LastOrDefault();
 
             return View(publicRelationResult);
         }

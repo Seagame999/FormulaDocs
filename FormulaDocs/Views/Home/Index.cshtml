@@ -9,11 +9,14 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h2>ยินดีต้อนรับ</h2>                   
-                        <p>@Html.DisplayName(Model.Date.ToString())</p>
-                        <p>@Html.DisplayName(Model.Name)</p>
-                        <p>@Html.DisplayName(Model.Description)</p>
-                        <p>@Html.DisplayName(Model.Creator)</p>                   
+                    <h2>
+                        ยินดีต้อนรับ @if (Session["Role"] != null && Session["Role"].Equals("Admin"))
+                        {<a class="btn btn-outline-primary" href="@Url.Action("CreateNews","PublicRelation")">เพิ่ม</a>}
+                    </h2>
+                    <p>@Html.DisplayName(Model.Date.ToString())</p>
+                    <p>@Html.DisplayName(Model.Name)</p>
+                    <p>@Html.DisplayName(Model.Description)</p>
+                    <p>@Html.DisplayName(Model.Creator)</p>
                 </div>
             </div>
         </div>

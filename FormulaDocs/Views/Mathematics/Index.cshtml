@@ -15,7 +15,10 @@
         <div class="d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
-                    <h5>เลือกเรื่อง</h5>
+                    <h5>
+                        เลือกเรื่อง @if (Session["Role"] != null && Session["Role"].Equals("Admin"))
+                        {<a class="btn btn-outline-primary" href="@Url.Action("AddFormulas","Mathematics")">เพิ่มสูตรคณิตศาสตร์</a>}
+                    </h5>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><a class="h5" href="@Url.Action("Areas")">พื้นที่</a></li>

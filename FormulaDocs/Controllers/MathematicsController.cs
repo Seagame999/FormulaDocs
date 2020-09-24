@@ -28,6 +28,14 @@ namespace FormulaDocs.Controllers
         {
             if (Session["Role"] != null && Session["Role"].Equals("Admin"))
             {
+                var categoryView = new List<string>()
+                {
+                    "พื้นที่"
+                };
+                ViewBag.categoryView = categoryView;
+
+
+
                 return View();
             }
             else

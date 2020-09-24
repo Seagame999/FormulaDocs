@@ -1,0 +1,25 @@
+﻿@model FormulaDocs.Models.PublicRelation
+@{
+    /**/
+
+    ViewBag.Title = "เพิ่มข่าว";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">หน้าแรก</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
+    </ol>
+</nav>
+
+@using (Html.BeginForm("CreateNews", "PublicRelation", FormMethod.Post))
+{
+<div class="form-group">
+    <label>ชื่อข่าว</label>
+    <input type="text" class="form-control" name="Name">
+    <label>รายละเอียด</label>
+    <textarea class="form-control" name="Description" rows="3"></textarea>
+</div>
+    <button class="btn btn-outline-success" type="submit">สร้างข่าว</button>
+}
+
